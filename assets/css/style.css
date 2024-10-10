@@ -217,6 +217,9 @@ header{
 #about{
     width: 100vw;
     height: 85vh;
+}
+
+.section-title{
     position: relative;
 }
 
@@ -294,4 +297,42 @@ button:hover{
     box-shadow: 0 3px 4px rgba(44, 44, 44, 0.3); */
     color: #444;
     background-color: white;
+}
+
+#service .content-container{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 33vh;
+    left: 5vw;
+}
+
+.service-container{
+    position: absolute;
+    top: 200px;
+    left: 500px;
+}
+
+.service-container a{
+    font-size: 50px;
+    color: rgb(38, 38, 38);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-decoration: none;
+    width: 45vw;
+    height: 27vh;
+    margin: 30px 0;
+    background-color: #c8e2e3;
+    opacity: 0.7;
+}
+
+.service-container a div{
+    margin: 15px 0 15px 70px;
+}
+
+.service-container span{
+    font-size: 15px;
+    padding-right: 15px;
+    text-decoration: underline;
 }
