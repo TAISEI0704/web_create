@@ -41,6 +41,7 @@ header{
 .checkbox {
     opacity: 0;
     z-index: 100;
+    cursor: pointer;
 }
 
 .span-container {
@@ -214,19 +215,14 @@ header{
     font-size: 20px;
 }
 
-#about{
-    width: 100vw;
-    height: 85vh;
-}
-
 .section-title{
-    position: relative;
+    width: 100%;
+    min-height: 85vh;
+    margin-top: 10vh;
 }
 
 .heading{
-    position: absolute;
-    top: 15vh;
-    left: 5vw;
+    margin-left: 5vw;
 }
 
 .heading p{
@@ -240,27 +236,25 @@ header{
     font-size: 13px;
     position: absolute;
     top: 60px;
-
 }
 
-#about .feature{
+#about .content-container{
+    max-width: 430px;
+    height: auto;
+    margin: 120px 10px auto 56vw;
+    position: relative;
+}
+
+#about .content-container::before{
+    content: '';
     width: 630px;
     height: 270px;
     background-color: #80ADB0;
     opacity: 0.3;
-    position: absolute;
-    top: 22vh;
-    left: 9vw;
     z-index: -1;
-}
-
-#about .content-container{
-    width: 430px;
-    min-width: 390px;
-    height: auto;
     position: absolute;
-    top: 40vh;
-    left: 55vw;
+    bottom: 75px;
+    left: -47vw;
 }
 
 .content-container div{
@@ -299,18 +293,19 @@ button:hover{
     background-color: white;
 }
 
-#service .content-container{
+#service .container{
+    display: flex;
+}
+
+#service .content-container, #work .content-container{
     width: 300px;
     height: auto;
-    position: absolute;
-    top: 33vh;
-    left: 5vw;
+    margin: 70px 0 0 5vw;
+    display: inline-block;
 }
 
 .service-container{
-    position: absolute;
-    top: 200px;
-    left: 500px;
+    margin: 70px 0 0 15vw;
 }
 
 .service-container a{
