@@ -227,7 +227,7 @@ header{
 .section-title{
     width: 100%;
     min-height: 85vh;
-    margin-top: 10vh;
+    margin-top: 15vh;
 
     .heading{
         margin-left: 5vw;
@@ -407,4 +407,52 @@ button{
         align-items: center;
         margin: 30px 0;
     }
+}
+
+#news{
+
+
+    .news-container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 15vh auto;   
+
+
+        .news-body{
+            display: block;
+            width: 75%;
+
+            li{
+                border-top: solid 1px #444;
+
+                &:last-child{
+                    border-bottom: solid 1px #444;
+                }
+            }
+
+            .news-item{
+                text-decoration: none;
+                font-size: 13px;
+                color: #444;
+                min-height: 13vh;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                div{
+                    padding: 0 20px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+
+                .time{
+                    width: 20%;
+                }
+            }
+        }
+    }
+
 }
