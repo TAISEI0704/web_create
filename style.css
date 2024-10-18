@@ -1,3 +1,10 @@
+/*
+Theme Name: web_create
+Author: taisei13-74
+Description: コーポレートサイト
+Version: 1.0
+*/
+
 header{
     width: 100%;
     height: 60px;
@@ -184,7 +191,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../img/welcome_01.jpg');
+    background-image: url('assets/img/welcome_01.jpg');
     background-position: center;
     background-size: cover;
 
@@ -252,9 +259,9 @@ header{
             width: 630px;
             height: 270px;
             background-color: #d2f6f8;
-            /* background-image: url('../img/about_01.jpg');
+            background-image: url('assets/img/about_01.jpg');
             background-position: center;
-            background-size: cover; */
+            background-size: cover;
             opacity: 0.7;
             z-index: -1;
             position: absolute;
@@ -341,13 +348,13 @@ button{
     }
 
     .service-1{
-        background-image: url('../img/service_01.jpg');
+        background-image: url('assets/img/service_01.jpg');
         background-position: center;
         background-size: cover;
     }
 
     .service-2{
-        background-image: url('../img/service_02.jpg');
+        background-image: url('assets/img/service_02.jpg');
         background-position: center;
         background-size: cover;
     }
