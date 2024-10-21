@@ -304,7 +304,7 @@ button{
     }
 }
 
-:is(#service, #work) .content-container{
+:is(#service, #work, .about-container) .content-container{
     width: 300px;
     height: auto;
     margin: 70px 0 0 5vw;
@@ -403,7 +403,9 @@ button{
 #news{
     .news-container{
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         width: 100%;
         max-width: 1200px;
         margin: 15vh auto;   
@@ -412,6 +414,7 @@ button{
         .news-body{
             display: block;
             width: 75%;
+            margin-bottom: 50px;
 
             li{
                 border-top: solid 1px #444;
@@ -587,8 +590,153 @@ footer{
 /* aboutのCSS */
 .appeal{
     width: 100%;
-    background-color: aquamarine;
+    background-color: rgb(157, 157, 157);
     /* background-image: url('../img/about_01.jpg');
     background-position: center;
     background-size: cover; */
+
+    .title{
+        height: 50vh;
+        margin-left: 15vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1{
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
+
+    .location{
+        background-color: black;
+        padding: 15px 0 15px 15vw;
+
+        a, span{
+            color: white;
+        }
+
+        a{
+            font-weight: 100;
+            span{
+                padding-left: 10px;
+            }
+        }
+
+        a~span{
+            font-weight: 600;
+            padding: 0 10px;
+        }
+
+    }
+}
+
+.about-container{
+    .message{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+
+        h2{
+            width: 60%;
+            font-size: 2rem;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        p{
+            width: 70%;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    }
+
+    .heading{
+        margin-top: 170px;
+    }
+
+    .dec-card{
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 35vw;
+        }
+    }
+
+    .grid-container{
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        margin: 50px auto;
+
+        .grid-item{
+            min-height: 200px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-left: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 10px;
+
+            &:nth-child(even){
+                border-right: none;
+            }
+
+            h3{
+                font-size: 2rem;
+                color: #4b93ff;
+                margin-bottom: 10px;
+            }
+
+            p{
+                font-size: 1.5rem;
+            }
+
+            .line{
+                /* width: 80%; */
+                font-size: 1rem;
+                color: #777;
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+.direct-service{
+    margin-top: 25vh;
+
+    a{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 70vw;
+        margin: 0 auto;
+        aspect-ratio: 3.5/1;
+        background-color: #d2f6f8;
+
+        p{
+            font-size: 3rem;
+            color: #444;
+            margin: 0 0 8% 5%;
+            position: relative;
+
+            &::after{
+                content: attr(data-title);
+                font-size: 1rem;
+                position: absolute;
+                top: 50px;
+                left: 0;
+
+            }
+        }
+    }
 }
