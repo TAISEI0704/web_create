@@ -159,7 +159,7 @@ header{
                 height: 2px;
                 position: absolute;
                 bottom: 0;
-                transition: all 0.3s ease;
+                transition: all 0.5s ease;
             }
 
             &:hover::after{
@@ -304,7 +304,7 @@ button{
     }
 }
 
-:is(#service, #work, .about-container) .content-container{
+:is(#service, #work, .about-container, #flow-section) .content-container{
     width: 300px;
     height: auto;
     margin: 70px 0 0 5vw;
@@ -634,29 +634,28 @@ footer{
     }
 }
 
-.about-container{
-    .message{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        text-align: center;
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 5vw;
 
-        h2{
-            width: 60%;
-            font-size: 2rem;
-            line-height: 1.5;
-            margin-bottom: 30px;
-        }
-
-        p{
-            width: 70%;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
+    h2{
+        width: 60%;
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
     }
 
+    p{
+        width: 70%;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+.about-container{
     .heading{
         margin-top: 170px;
     }
@@ -740,3 +739,65 @@ footer{
         }
     }
 }
+
+/* serviceのCSS */
+.panel-section{
+    margin: 15vh 0;
+
+    .service{
+        /* border: #444 solid 1px; */
+        /* height: 90vh; */
+        display: flex;
+
+        > div{
+            width: 50vw;
+            aspect-ratio: 1.618/1;
+            padding: 5vh 0;
+        }
+
+        .text-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            overflow: hidden;
+
+            h3, p, a{
+                margin-left: 80px;
+            }
+
+            h3{
+                font-size: 3rem;
+                line-height: 1.3;
+            }
+
+            p{
+                margin-bottom: 15%;
+            }
+
+            .text{
+                width: 45%;
+            }
+
+            a{
+                margin-right: auto;
+            }
+
+            .number{
+                font-size: 30rem;
+                /* line-height: 0.7; */
+                color: #d3eeef94;
+                /* display: inline-block; */
+                position: absolute;
+                bottom: -70px;
+                right: -50px;
+                z-index: -100;
+            }
+        }
+
+        .box{
+            background-color: #d3eeef;
+        }
+    }
+}
+
