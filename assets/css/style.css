@@ -174,6 +174,7 @@ header{
     }
 }
 
+/* indexのCSS */
 #welcome{
     height: 90vh;
     width: 100%;
@@ -214,10 +215,9 @@ header{
     }
 }
 
-/* indexのCSS */
 .section-title{
     width: 100%;
-    min-height: 85vh;
+    min-height: 80vh;
     margin-top: 15vh;
 
     .heading{
@@ -248,7 +248,7 @@ header{
         &::before{
             content: '';
             width: 630px;
-            height: 270px;
+            aspect-ratio: 2.3/1;
             background-color: #d2f6f8;
             /* background-image: url('../img/about_01.jpg');
             background-position: center;
@@ -267,7 +267,7 @@ header{
         padding-bottom: 20px;
 
         p{
-            line-height: 1.3;
+            line-height: 1.5;
         }
 
         .text{
@@ -634,7 +634,7 @@ footer{
     }
 }
 
-.message{
+.head-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -709,7 +709,7 @@ footer{
     }
 }
 
-.direct-service, .direct-work{
+.direct-service, .direct-work, .direct-contact{
     margin-top: 25vh;
 
     a{
@@ -830,7 +830,7 @@ footer{
 /* workのCSS */
 #work-nav{
     width: 80vw;
-    margin: 150px auto 50px;
+    margin: 100px auto 50px;
 
     ul{
         display: flex;
@@ -916,5 +916,77 @@ footer{
                 line-height: 1.5;
             }
         }
+    }
+}
+
+/* companyのCSS */
+#company-message{
+    .content-container{
+        width: 60vw;
+        height: auto;
+        margin: 15% 50px auto auto;
+        position: relative;
+
+        .text{
+            font-size: 18px;
+        }
+
+        &::before{
+            content: '';
+            width: 40vw;
+            aspect-ratio: 1.618/1;
+            background-color: #d2f6f8;
+            /* background-image: url('../img/about_01.jpg');
+            background-position: center;
+            background-size: cover; */
+            opacity: 0.7;
+            z-index: -1;
+            position: absolute;
+            top: -120px;
+            left: -30vw;
+        }
+    }
+}
+
+#company-data, #access{
+    width: 100%;
+
+    table{
+        width: 65vw;
+        margin: 120px auto;
+
+        tr{
+            border-top: #d6d6d6 solid 1px;
+
+            &:last-child{
+                border-bottom: #d6d6d6 solid 1px;
+            }
+
+            th, td{
+                padding: 30px 0;
+            }
+
+            th{
+                width: 200px;
+                text-align: inherit;
+            }
+        }
+    }
+}
+
+#access{
+    .map{
+        width: 55vw;
+        aspect-ratio: 1.5/1;
+        margin: 15vh auto 0 auto;
+
+        iframe{
+            width: 100%;
+            aspect-ratio: 1.5/1;
+        }
+    }
+
+    table{
+        margin-top: 20px;
     }
 }
