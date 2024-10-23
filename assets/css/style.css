@@ -237,6 +237,10 @@ header{
             }
         }
     }
+
+    &:last-child{
+        padding-bottom: 0;
+    }
 }
 
 #about{
@@ -795,7 +799,7 @@ footer{
 }
 
 .flow-container{
-    width: 70%;
+    width: 100%;
     margin: 10vh auto;
 
     li{
@@ -1134,6 +1138,23 @@ footer{
                 left: 0;
             }
         }
+    }
+}
+
+/* news01のCSS */
+.news-content{
+    h2{
+        font-size: 20px;
+    }
+
+    img{
+        margin: 80px 0;
+    }
+
+    p{
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 13px;
     }
 }
 
