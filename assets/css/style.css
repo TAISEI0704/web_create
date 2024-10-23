@@ -442,7 +442,6 @@ button{
 }
 
 .panel{
-    padding-top: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -615,7 +614,7 @@ footer{
         a{
             font-weight: 100;
             span{
-                padding-left: 10px;
+                padding: 0 10px;
             }
         }
 
@@ -707,7 +706,7 @@ footer{
         justify-content: flex-start;
         align-items: flex-end;
         width: 100%;
-        margin: auto;
+        margin-bottom: 10vh;
         aspect-ratio: 4/1;
         background-color: #d2f6f8;
 
@@ -823,6 +822,37 @@ footer{
             line-height: 1.5;
         }
 
+    }
+}
+
+/* service01のCSS */
+#service-desc-section{
+    .content-container{
+        max-width: 60%;
+        min-height: 70vh;
+        position: relative;
+        
+        p{
+            margin-bottom: 40px;
+        }
+
+        &::before{
+            content: "";
+            width: 80%;
+            aspect-ratio: 1.618/1;
+            background-color: #c8e2e3;
+            position: absolute;
+            top: 70px;
+            left: calc(52/60*100%);
+            z-index: -10;
+        }
+
+        &:nth-child(even){
+            margin-left: 40%;
+            &::before{
+                left: calc(-40/60*100%);
+            }
+        }
     }
 }
 
@@ -1089,7 +1119,7 @@ footer{
                 border-bottom: 2px solid #444;
             }
         }
-    
     }
-
 }
+
+/* ContactのCSS */
