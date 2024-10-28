@@ -199,7 +199,7 @@ header{
     }
     .welcome-message{
         display: block;
-        z-index: 10;
+        z-index: 1;
         p{
             color: white;
             font-size: 13px;
@@ -261,7 +261,7 @@ header{
             left: -47vw;
         }
     }
-} */
+}
 
 @media screen and (min-width:990px){
     #welcome{
@@ -302,7 +302,6 @@ header{
             }
         }
     }
-
 }
 
 .content-container{
