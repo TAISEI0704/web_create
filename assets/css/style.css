@@ -1,3 +1,11 @@
+body {
+    font-family: 'Montserrat';
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
 /* 全ページ共通のヘッダー */
 header{
     width: 100%;
@@ -7,13 +15,19 @@ header{
     align-items: center;
     z-index: 10;
     position: relative;
-
-    #header-left{
-        padding: 10px 0 10px 10px;
-
-        a{
-            text-decoration: none;
-            display: block;
+    .logo{
+        height: 50px;
+        margin-left: 10px;
+        text-decoration: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        span{
+            font-size: 20px;
+            color: #333333;
+        }
+        img{
+            height: 30px;
         }
     }
 }
@@ -26,7 +40,6 @@ header{
 
 #header-hamburger{
     position: relative;
-
     .span-container{
         width: 25px;
         height: 25px;
@@ -38,17 +51,15 @@ header{
         flex-flow: row wrap;
         align-items: center;
         z-index: 90;
-
         span{
             width: 100%;
             height: 2px;
-            background: white;
+            background: #333333;
             transition: all 250ms ease-out;
             transform-origin: 0 0;
         }
     }
-    
-    .checkbox{
+    #checkbox{
         width: 25px;
         height: 25px;
         position: absolute;
@@ -58,50 +69,42 @@ header{
         opacity: 0;
         z-index: 100;
         cursor: pointer;
-
         &:checked ~ .span-container span:nth-last-child(1){
             transform: rotate(-45deg) translate(-1px, 0px);
         }
-
         &:checked ~ .span-container span:nth-last-child(2){
             transform: rotate(0deg) scale(0.2, 0.2);
             opacity: 0;
         }
-
-        &.checkbox:checked ~ .span-container span:nth-last-child(3){
+        &:checked ~ .span-container span:nth-last-child(3){
             transform: rotate(45deg) translate(0px, -1px);
         }
-
         &:checked ~ #nav-hamburger {
             opacity: 1;
             visibility: visible;
         }
     }
-
     #nav-hamburger{
         position: fixed;
-        left: 0;
         top: 0;
-        width: 100vw;
-        height: 100vh;
+        left: 0;
+        width: 100%;
+        height: 100%;
         padding: 90px 5%;
         z-index: 50;
-        background: #444;
-        transition: all 380ms ease-out;
         opacity: 0;
+        background: #444;
+        transition: all 0.3s ease;
         visibility: hidden;
-    
         ul{
-            width: 90vw;
+            width: 90%;
             list-style-type: none;
             padding: 0;
             margin: 0;
-    
-            li.nav-item{
+            .nav-item{
                 height: 55px;
                 border-bottom: solid 1px rgb(255, 255, 255, 0.5);
                 margin: 5px;
-    
                 a{
                     font-size: 17px;
                     font-weight: 600;
@@ -117,40 +120,41 @@ header{
     }
 }
 
-@media screen and (min-width:990px) {
+@media screen and (min-width:990px) { 
     .logo{
-        height: 50px;
+        span{
+            font-size: 30px;
+        }
+        img{
+            height: 50px;
+        }
     }
-    
     #header-nav ul{
         list-style-type: none;
         display: flex;
         justify-content: space-between;
-
         li.nav-item{
             margin: 0 25px;
         }
-
         a{
-            color: rgb(29, 28, 28);
+            width: auto;
+            height: 60px;
+            padding: 0 5px;
+            margin: 2px 0;
+            color: #333333;
             font-size: 1.4rem;
             font-weight: 500;
             text-decoration: none;
-            padding: 0 5px;
-            height: 10vh;
-            width: auto;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
-
             &::before{
                 content: attr(data-title);
                 font-size: 8px;
                 position: absolute;
                 top: 10px;
             }
-
             &::after{
                 content: "";
                 display: block;
@@ -160,14 +164,12 @@ header{
                 bottom: 0;
                 transition: all 0.5s ease;
             }
-
             &:hover::after{
                 background-color: rgb(56, 56, 56);
                 width: 100%;
             }
         }
     }
-
     #header-hamburger{
         display: none;
     }
@@ -175,7 +177,7 @@ header{
 
 /* indexのCSS */
 #welcome{
-    height: 90vh;
+    height: 500px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -184,60 +186,54 @@ header{
     background-image: url('../img/welcome_01.jpg');
     background-position: center;
     background-size: cover;
-
     &::before{
         content: '';
         position: absolute;
-        top: 0;
+        top: 50px;
         left: 0;
         width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.3);
+        height: 500px;
+        background: rgba(255, 255, 255, 0.3);
         z-index: 0;
+        overflow: hidden;
     }
-
     .welcome-message{
         display: block;
-        z-index: 1;
-
+        z-index: 10;
         p{
             color: white;
-            font-size: 35px;
-            font-weight: 700;
+            font-size: 13px;
             line-height: 1.3;
             text-align: center;
         }
-
-        p.sub{
-            font-size: 20px;
+        p.main{
+            font-size: 26px;
+            font-weight: 700;
         }
     }
 }
 
 .section-title{
-    width: 80%;
-    /* min-height: 80vh; */
+    width: 100%;
     margin: 0 auto;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     position: relative;
-    /* background-color: #e89292; */
-
     .heading{
         p{
-            font-size: 32px;
+            text-align: center;
+            font-size: 26px;
             font-weight: 500;
-            position: relative;
-
+            line-height: 1.3;
             &::before{
                 content: attr(data-title);
                 font-size: 13px;
-                position: absolute;
-                top: 60px;
+                font-weight: 100;
+                display: flex;
+                justify-content: center;
             }
         }
     }
-
     &:last-child{
         padding-bottom: 0;
     }
@@ -265,6 +261,48 @@ header{
             left: -47vw;
         }
     }
+} */
+
+@media screen and (min-width:990px){
+    #welcome{
+        height: 90vh;
+        &::before{
+            position: absolute;
+            top: 64px;
+            left: 0;
+            height: 90vh;
+        }
+        .welcome-message{    
+            p{
+                font-size: 20px;
+            }
+            p.main{
+                font-size: 35px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .section-title{
+        width: 80%;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        .heading{
+            p{
+                text-align: initial;
+                font-size: 32px;
+                font-weight: 500;
+                position: relative;
+                &::before{
+                    content: attr(data-title);
+                    font-size: 13px;
+                    position: absolute;
+                    top: 60px;
+                }
+            }
+        }
+    }
+
 }
 
 .content-container{
