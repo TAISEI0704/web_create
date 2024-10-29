@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
     font-family: 'Montserrat';
 }
@@ -216,18 +217,16 @@ header{
 .section-title{
     width: 100%;
     margin: 0 auto;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    position: relative;
+    padding: 10vh 0;
     .heading{
         p{
             text-align: center;
-            font-size: 26px;
+            font-size: 20px;
             font-weight: 500;
             line-height: 1.3;
             &::before{
                 content: attr(data-title);
-                font-size: 13px;
+                font-size: 10px;
                 font-weight: 100;
                 display: flex;
                 justify-content: center;
@@ -240,30 +239,29 @@ header{
 }
 
 #about{
+    .container{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .content-container{
-        max-width: 430px;
+        width: 85%;
         height: auto;
-        margin: 120px 10px auto 56vw;
-        position: relative;
-
-        &::before{
-            content: '';
-            width: 630px;
-            aspect-ratio: 2.3/1;
-            background-color: #d2f6f8;
-            /* background-image: url('../img/about_01.jpg');
-            background-position: center;
-            background-size: cover; */
-            opacity: 0.7;
-            z-index: -1;
-            position: absolute;
-            bottom: 75px;
-            left: -47vw;
+        padding: 0 10px;
+        text-align: center;
+    }
+    .img-container{
+        width: 0%;
+        img{
+            width: 100%;
+            height: 0;
         }
     }
 }
 
 @media screen and (min-width:990px){
+    /* Welcome section */
     #welcome{
         height: 90vh;
         &::before{
@@ -282,23 +280,44 @@ header{
             }
         }
     }
-
     .section-title{
         width: 80%;
-        padding-top: 10vh;
-        padding-bottom: 10vh;
+        padding: 10vh 0;
         .heading{
             p{
                 text-align: initial;
-                font-size: 32px;
+                font-size: 25px;
                 font-weight: 500;
                 position: relative;
                 &::before{
                     content: attr(data-title);
-                    font-size: 13px;
+                    font-size: 10px;
                     position: absolute;
-                    top: 60px;
+                    top: 35px;
                 }
+            }
+        }
+    }
+    /* AboutUs section */
+    #about{
+        .container{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .content-container{
+            max-width: 50%;
+            height: auto;
+            padding: 0 10px;
+            text-align: start;
+        }
+        .img-container{
+            width: auto;
+            img{
+                width: 100%;
+                height: 100%;
             }
         }
     }
@@ -307,6 +326,10 @@ header{
 .content-container{
     div{
         padding-bottom: 20px;
+
+        &:last-child{
+            padding-bottom: 0;
+        }
 
         p{
             line-height: 1.5;
