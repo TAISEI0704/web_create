@@ -346,44 +346,52 @@ button{
 #work{
     .work-row{
         width: 100%;
-        padding: 0 10px;
-        display: grid;
-        grid-template-columns: none;
-        grid-auto-flow: column;
-        gap: 20px;
+        display: flex;
+        flex-wrap: nowrap;
         overflow-x: scroll;
         &::-webkit-scrollbar {
             display: none;
         }
-        article{
-            margin-bottom: 50px;
+    }
+}
+.work-row{
+    padding: 0 10px;
+    margin-top: 50px;
+    box-sizing: border-box; 
+    display: flex;
+    article{
+        box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        min-width: 230px;
+        margin: 10px;
+        box-sizing: border-box;
+        .work-view{
+            width: 100%;
+            aspect-ratio: 1.618/1;
+            background-color: #cfcfcf57;
+            padding: 10px;
             box-sizing: border-box; 
-            .work-view{
-                width: 250px;
-                aspect-ratio: 1.618/1;
-                background-color: #cfcfcf57;
-                padding: 10px;
-                >a{
-                    display: block;
-                    aspect-ratio: 16/10.5;
-                    overflow: hidden;
-                    img{
-                        width: 100%;
-                        height: 100%;
-                    }
+            >a{
+                display: block;
+                aspect-ratio: 16/10.5;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
                 }
-                h3{
-                    font-size: 18px;
-                    margin-top: 15px;
-                    min-height: 50px;
-                }
-                p{
-                    line-height: 1.5;
-                }
+            }
+            h3{
+                font-size: 18px;
+                margin-top: 15px;
+                min-height: 50px;
+            }
+            p{
+                line-height: 1.5;
             }
         }
     }
 }
+
 @media screen and (min-width:990px){
     /* Welcome section */
     #welcome{
@@ -985,15 +993,12 @@ footer{
 #work-nav{
     width: 80%;
     margin: 100px auto 0;
-
     ul{
         display: flex;
         justify-content: center;
         align-items: center;
-
         li{
             width: 100%;
-
             a{
                 display: block;
                 text-align: center;
@@ -1001,72 +1006,60 @@ footer{
                 color: white;
                 opacity: 0.3;
                 transition: 0.25s;
-
                 &:hover{
                     opacity: 1;
                 }
             }
-
             .all{
                 background-color: #444;
             }
-            
             .service01{
                 background-color: #4bd2ff;
             }
-
             .service02{
                 background-color: #4b93ff;
             }
-
             .service03{
                 background-color: #964bff;
             }
-
             a.active{
                 opacity: 1;
             }
         }
     }
 }
-
-.work-row{
+#works-container{
     width: 80%;
-    margin: 50px auto 0;
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    justify-content: space-between;
+    .work-row{
+        width: 100%;      
+        display: flex;
+        flex-wrap: wrap;
+        article{
 
-    article{
-        padding: 0 20px;
-        margin-bottom: 50px;
-        width: 100%;
-        box-sizing: border-box; 
-
-        .work-view{
-            background-color: #cfcfcf57;
-            padding: 10px;
-            
-            >a{
-                display: block;
-                aspect-ratio: 16/10.5;
-                overflow: hidden;
-
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
-            h3{
-                font-size: 18px;
-                margin-top: 15px;
-                min-height: 50px;
-            }
-
-            p{
-                line-height: 1.5;
-            }
+        }
+    }
+}
+@media screen and (max-width:660px){
+    #works-container{
+        article{
+            flex: 1 1 calc(100% - 20px);
+            max-width: calc(100% - 20px);
+        }
+    }
+}
+@media screen and (min-width:660px) and (max-width:989px) {
+    #works-container{
+        article{
+            flex: 1 1 calc(50% - 20px);
+            max-width: calc(50% - 20px);
+        }
+    }
+}
+@media screen and (min-width:990px) {
+    #works-container{
+        article{
+            flex: 1 1 calc(33.33% - 20px);
+            max-width: calc(33.33% - 20px);
         }
     }
 }
