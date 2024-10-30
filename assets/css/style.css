@@ -463,6 +463,72 @@ button{
         }
     }
 }
+.direct-form{
+    width: 100%;
+    .form-panel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        >div, >a{
+            height: 65vh;
+            padding: 0 auto;
+            box-sizing: border-box;
+            display: flex;
+        }
+        >div{
+            width: calc(100%/3*2);
+            padding: 0 10%;
+            background-color: #b5d1fc;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            h2{
+                font-size: 18px;
+                line-height: 1.5;
+                margin-bottom: 30px;
+            }
+            p{
+                font-size: 10px;
+                line-height: 1.5;
+            }
+        }
+        a{
+            width: calc(100%/3);
+            color: #444;
+            background-color: #8db9fc;
+            justify-content: center;
+            align-items: center;
+            div{
+                margin: 0 10px;
+                border-bottom: 2px solid #444;
+            }
+            span, i{
+                display: inline;
+                font-size: 10px;
+                line-height: 1.5;
+                padding: 10px 5px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:660px) and (max-width:989px) {
+    .direct-form{
+        .form-panel{
+            >div{
+                h2{
+                    font-size: 25px;
+                }
+            }
+            a{
+                span,i{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (min-width:990px){
     /* Welcome section */
@@ -558,6 +624,61 @@ button{
     /* News section */
     .news-row{
         width: 100%;
+    }
+
+    /* direct section */
+    .direct-form{
+        width: 100%;
+        .form-panel{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            >div, >a{
+                height: 65vh;
+                padding: 0 auto;
+                box-sizing: border-box;
+                display: flex;
+            }
+        
+            >div{
+                width: calc(100%/3*2);
+                padding: 0 10%;
+                background-color: #b5d1fc;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+    
+                h2{
+                    font-size: 30px;
+                    line-height: 1.5;
+                    margin-bottom: 30px;
+                }
+    
+                p{
+                    font-size: 13px;
+                    line-height: 1.5;
+                }
+            }
+    
+            a{
+                width: calc(100%/3);
+                color: #444;
+                background-color: #8db9fc;
+                justify-content: center;
+                align-items: center;
+                div{
+                    margin: 0 10px;
+                    border-bottom: 2px solid #444;
+                }
+                span, i{
+                    display: inline;
+                    font-size: 18px;
+                    line-height: 1.5;
+                    padding: 10px 20px;
+                }
+            }
+        }
     }
 }
 
@@ -1256,59 +1377,6 @@ footer{
         font-size: 13px;
         line-height: 1.5;
         margin-bottom: 13px;
-    }
-}
-
-.direct-form{
-    width: 100%;
-
-    .form-panel{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-        >div, >a{
-            height: 65vh;
-            padding: 0 auto;
-            box-sizing: border-box;
-            display: flex;
-        }
-    
-        >div{
-            width: calc(100%/3*2);
-            padding: 0 10%;
-            background-color: #b5d1fc;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-
-            h2{
-                font-size: 30px;
-                line-height: 1.5;
-                margin-bottom: 30px;
-            }
-
-            p{
-                font-size: 13px;
-                line-height: 1.5;
-            }
-        }
-
-        a{
-            width: calc(100%/3);
-            color: #444;
-            background-color: #8db9fc;
-            justify-content: center;
-            align-items: center;
-
-            span, i{
-                display: inline;
-                font-size: 20px;
-                line-height: 1.5;
-                padding: 10px 20px;
-                border-bottom: 2px solid #444;
-            }
-        }
     }
 }
 
