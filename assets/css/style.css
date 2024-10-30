@@ -621,7 +621,7 @@ button{
             width: calc(100%/3*2);
             padding: 0 10%;
             background-image: 
-                linear-gradient(to bottom, rgba(49, 49, 49, 0)20%, rgba(49, 49, 49, 0.6)100%),
+                linear-gradient(to bottom, rgba(49, 49, 49, 0)0%, rgba(49, 49, 49, 0.6)100%),
                 url('../img/contact_01.jpg');
             background-position: center;
             background-size: cover;
@@ -773,7 +773,6 @@ button{
     .news-row{
         width: 100%;
     }
-
     /* direct section */
     .direct-form{
         width: 100%;
@@ -790,7 +789,6 @@ button{
                     line-height: 1.5;
                     margin-bottom: 30px;
                 }
-    
                 p{
                     font-size: 13px;
                     line-height: 1.5;
@@ -815,7 +813,6 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     a{
         text-decoration: none;
         display: flex;
@@ -824,112 +821,133 @@ button{
         width: 37vw;
         aspect-ratio: 2/1;
         background-color: #d2f6f8;
-
         p{
             font-size: 40px;
             color: #444;
             margin: 0 0 15% 5%;
             position: relative;
-
             &::after{
                 content: attr(data-title);
                 font-size: 15px;
                 position: absolute;
                 top: 68px;
                 left: 0;
-
             }
         }
     }
 }
 
-/* aboutのCSS */
+/* appealエリア */
 .appeal{
     width: 100%;
-    background-color: rgb(157, 157, 157);
-    /* background-image: url('../img/about_01.jpg');
+    background-image:
+        linear-gradient(rgba(49, 49, 49, 0.6) ,rgba(49, 49, 49, 0.6)),
+        url('../img/about_top.jpg');
     background-position: center;
-    background-size: cover; */
-
+    background-size: cover;
     .title{
-        height: 50vh;
-        margin-left: 10vw;
+        color: #f0f4f8;
+        height: 30vh;
+        margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
+        align-items: center;
         h1{
-            font-size: 55px;
+            font-size: 25px;
             margin-bottom: 15px;
         }
         p{
             font-size: 14px;
         }
     }
-
     .location{
         background-color: black;
-        padding: 15px 0 15px 10vw;
-
+        padding: 15px 0;
+        padding-left: 10px;
         a, span{
             color: white;
         }
-
         a{
             font-weight: 100;
             span{
                 padding: 0 10px;
             }
         }
-
         a~span{
             font-weight: 600;
             padding: 0 10px;
         }
-
     }
 }
-
+@media screen and (min-width:660px) and (max-width:989px) {
+    .appeal{
+        .title{
+            height: 50vh;
+            h1{
+                font-size: 55px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media screen and (min-width:990px) {
+    .appeal{
+        .title{
+            height: 50vh;
+            margin-left: 10vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            h1{
+                font-size: 55px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+        .location{
+            padding-left: 10vw;
+        }
+    }
+}
+/* aboutのCSS */
 .head-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-
+    align-items: center;
     h2{
-        width: 60%;
-        font-size: 24px;
+        width: 80%;
+        font-size: 18px;
         line-height: 1.5;
         margin-bottom: 30px;
     }
-
     p{
-        width: 70%;
+        width: 90%;
         font-size: 13px;
         line-height: 1.5;
     }
 }
-
 #about-container{
     .heading{
         margin-top: 170px;
     }
-
     .dec-card{
         display: flex;
         justify-content: center;
-
         img{
             width: 35vw;
         }
     }
-
     .grid-container{
-        width: 100%;
+        width: 90%;
         display: grid;
         grid-template-columns: repeat(2, 50%);
         margin: 50px auto;
-
         .grid-item{
             min-height: 200px;
             text-align: center;
@@ -940,26 +958,49 @@ button{
             align-items: center;
             justify-content: center;
             padding: 15px 30px;
-
             &:nth-child(even){
                 border-right: none;
             }
-
             h3{
                 font-size: 26px;
                 color: #4b93ff;
                 margin-bottom: 10px;
             }
-
             p{
                 font-size: 19px;
             }
-
             .line{
                 font-size: 13px;
                 color: #777;
                 margin-top: 50px;
             }
+        }
+    }
+}
+@media screen and (min-width:660px) and (max-width:989px) {
+    .head-text{
+        h2{
+            font-size: 24px;
+        }
+    }
+}
+@media screen and (min-width:990px) {
+    .head-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        h2{
+            width: 60%;
+            font-size: 24px;
+        }
+        p{
+            width: 70%;
+        }
+    }
+    #about-container{
+        .grid-container{
+            width: 100%;
         }
     }
 }
@@ -1165,9 +1206,6 @@ button{
         width: 100%;      
         display: flex;
         flex-wrap: wrap;
-        article{
-
-        }
     }
 }
 @media screen and (max-width:660px){
