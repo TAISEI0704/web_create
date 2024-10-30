@@ -176,6 +176,107 @@ header{
     }
 }
 
+/* 全ページ共通のフッター */
+footer{
+    width: 100%;
+    background-color: #d2f6f8;
+    
+    .container{
+        padding: 40px 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        .footer-logo{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a{
+                display: flex;
+                align-items: center;
+                height: 40px;
+                img{
+                    height: 100%;
+                    padding-right: 5px;
+                }
+                span{
+                    font-size: 15px;
+                }
+            }
+            /* .footer-icon{
+                display: flex;
+                align-items: center;
+                height: 50px;
+                width: auto;
+                border: #444 solid 1px;
+                border-radius: 5px;
+                span{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #444;
+                    margin: auto 15px;
+                }
+                a{
+                    margin: 0 15px;
+                    i{
+                        color: #444;
+                        font-size: 2.5rem;
+                    }
+                }
+            } */
+        }
+        .footer-nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            .page-nav{
+                display: flex;
+                .nav-container{
+                    margin-right: 10vw;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    a{  
+                        text-decoration: none;
+                        color: #444;
+                        font-size: 13px;
+                        font-weight: 600;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            .other-nav{
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    li{
+                        /* padding-bottom: 10px; */
+                        line-height: 1.5;
+                        a{
+                            text-decoration: none;
+                            color: #444;
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    small{
+        font-size: 10px;
+        display: block;
+        width: 95%;
+        padding: 15px 0;
+        margin: 0 auto;
+        border-top: #444 solid 1px;
+        text-align: center;
+    }
+}
+
 /* indexのCSS */
 #welcome{
     height: 500px;
@@ -234,7 +335,7 @@ header{
         }
     }
     &:last-child{
-        padding-bottom: 0;
+        padding: 0;
     }
 }
 .content-container{
@@ -470,7 +571,7 @@ button{
         justify-content: center;
         align-items: center;
         >div, >a{
-            height: 65vh;
+            height: 50vh;
             padding: 0 auto;
             box-sizing: border-box;
             display: flex;
@@ -711,112 +812,6 @@ button{
 
             }
         }
-    }
-}
-
-/* 全ページ共通のフッター */
-footer{
-    width: 100%;
-    background-color: #d2f6f8;
-    
-    .container{
-        padding: 5% 10%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-
-        .footer-logo{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
-            a{
-                display: inline-block;
-            }
-
-            .footer-icon{
-                display: flex;
-                align-items: center;
-                height: 50px;
-                width: auto;
-                border: #444 solid 1px;
-                border-radius: 5px;
-
-                span{
-                    font-size: 16px;
-                    font-weight: 600;
-                    color: #444;
-                    margin: auto 15px;
-                }
-
-                a{
-                    margin: 0 15px;
-
-                    i{
-                        color: #444;
-                        font-size: 2.5rem;
-    
-                    }
-                }
-            }
-        }
-
-        .footer-nav{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 70px;
-
-            .page-nav{
-                display: flex;
-
-                .nav-container{
-                    margin-right: 15vw;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: flex-start;
-    
-                    a{  
-                        text-decoration: none;
-                        color: #444;
-                        font-size: 16px;
-                        font-weight: 600;
-                        margin-bottom: 25px;
-                    }
-                }
-            }
-
-            .other-nav{
-                ul{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-end;
-
-                    li{
-                        /* padding-bottom: 10px; */
-                        line-height: 1.8;
-                        a{
-                            text-decoration: none;
-                            color: #444;
-                            font-size: 13px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    small{
-        font-size: 14px;
-        display: block;
-        width: 95%;
-        padding: 15px 0;
-        margin: 0 auto;
-        border-top: #444 solid 1px;
-        text-align: center;
     }
 }
 
