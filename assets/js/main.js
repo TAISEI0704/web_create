@@ -11,6 +11,22 @@ checkbox.addEventListener('change', () => {
     }
 });
 
+//sectionのフェードイン
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.fadeIn');
+
+    function checkVisibility() {
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 300) {
+                element.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // 初期チェック
+});
 
 
 
