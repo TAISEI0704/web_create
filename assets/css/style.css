@@ -1209,40 +1209,56 @@ button{
 }
 
 /* workのCSS */
-#work-nav{
-    width: 80%;
+#work-nav {
+    display: none;
+}
+#work-nav-select {
+    font-size: 16px;
+    display: block;
+    width: 50%;
+    padding: 8px;
     margin: 100px auto 0;
-    ul{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        li{
-            width: 100%;
-            a{
-                display: block;
-                text-align: center;
-                padding: 15px;
-                color: white;
-                opacity: 0.3;
-                transition: 0.25s;
-                &:hover{
-                    opacity: 1;
+}
+@media (min-width: 660px) {
+    #work-nav-select {
+        display: none;
+    }
+    #work-nav{
+        display: block;
+        width: 90%;
+        margin: 100px auto 0;
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li{
+                width: 100%;
+                a{
+                    display: block;
+                    text-align: center;
+                    padding: 15px;
+                    color: white;
+                    opacity: 0.3;
+                    transition: 0.25s;
+                    &:hover{
+                        opacity: 1;
+                    }
+                    &.active{
+                        opacity: 1;
+                    }
                 }
-            }
-            .all{
-                background-color: #444;
-            }
-            .service01{
-                background-color: #4bd2ff;
-            }
-            .service02{
-                background-color: #4b93ff;
-            }
-            .service03{
-                background-color: #964bff;
-            }
-            a.active{
-                opacity: 1;
+                .all {
+                    background-color: #16263e;
+                }
+                .service01 {
+                    background-color: #577c92;
+                }
+                .service02 {
+                    background-color: #a15a8b;
+                }
+                .service03 {
+                    background-color: #b5844b;
+                }
             }
         }
     }
@@ -1273,6 +1289,7 @@ button{
 }
 @media screen and (min-width:990px) {
     #works-container{
+        width: 100%;
         article{
             flex: 1 1 calc(33.33% - 20px);
             max-width: calc(33.33% - 20px);
