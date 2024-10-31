@@ -222,27 +222,6 @@ footer{
                     font-weight: 500;
                 }
             }
-            /* .footer-icon{
-                display: flex;
-                align-items: center;
-                height: 50px;
-                width: auto;
-                border: #444 solid 1px;
-                border-radius: 5px;
-                span{
-                    font-size: 16px;
-                    font-weight: 600;
-                    color: #444;
-                    margin: auto 15px;
-                }
-                a{
-                    margin: 0 15px;
-                    i{
-                        color: #444;
-                        font-size: 2.5rem;
-                    }
-                }
-            } */
         }
         .footer-nav{
             width: 100%;
@@ -1367,29 +1346,50 @@ button{
 
 /* companyのCSS */
 #company-message{
-    .content-container{
-        width: 65%;
-        height: auto;
-        margin: 15% 0 auto auto;
-        position: relative;
-
-        .text{
-            font-size: 18px;
+    width: 80%;
+    .container{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img{
+        margin-bottom: 30px;
+        img{
+            width: 100%;
         }
-
-        &::before{
-            content: '';
-            width: 80%;
-            aspect-ratio: 1.618/1;
-            background-color: #d2f6f8;
-            /* background-image: url('../img/about_01.jpg');
-            background-position: center;
-            background-size: cover; */
-            opacity: 0.7;
-            z-index: -1;
-            position: absolute;
-            top: -90px;
-            left: -54%;
+    }
+    .content-container{
+        width: 100%;
+        height: auto;
+        .text{
+            font-size: 15px;
+        }
+    }
+}
+@media screen and (min-width:990px) {
+    #company-message{
+        width: 100%;
+        .container{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .img{
+            width: 40%;
+            margin-bottom: 0;
+            img{
+                width: 100%;
+            }
+        }
+        .content-container{
+            width: 50%;
+            height: auto;
+            .text{
+                font-size: 18px;
+            }
         }
     }
 }
@@ -1399,18 +1399,14 @@ button{
         width: 80%;
         margin: 0 auto;
         margin-top: 100px;
-
         tr{
             border-top: #d6d6d6 solid 1px;
-
             &:last-child{
                 border-bottom: #d6d6d6 solid 1px;
             }
-
             th, td{
                 padding: 30px 0;
             }
-
             th{
                 width: 200px;
                 text-align: inherit;
@@ -1418,19 +1414,16 @@ button{
         }
     }
 }
-
 #access{
     .map{
         width: 60%;
         aspect-ratio: 1.5/1;
         margin: 100px auto 0 auto;
-
         iframe{
             width: 100%;
             aspect-ratio: 1.5/1;
         }
     }
-
     table{
         margin-top: 5px;
     }
