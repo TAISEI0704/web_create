@@ -521,7 +521,8 @@ button{
 }
 .news-row{
     width: 80%;
-    margin: 120px auto;
+    margin: 0 auto;
+    margin-top: 100px;
     .news-article{
         border-top: 1px solid #b5b5b57f;
         &:last-child{
@@ -569,7 +570,7 @@ button{
         margin-bottom: 10px;
         .news-tag{
             line-height: 1.5;
-            color: #d1d5db;
+            color: white;
             border-radius: 3px;
             padding: 0 10px;
         }
@@ -1433,40 +1434,33 @@ button{
 #news-container{
     .news-row{
         display: flex;
+        flex-direction: column-reverse;
         justify-content: space-between;
-        flex-wrap: wrap-reverse;
-
+        align-items: center;
         .main{
-            width: calc(100%/3*2);
-            padding: 10px 0 10px 10px ;
+            width: 90%;
+            padding-bottom: 50px;
             box-sizing: border-box;
         }
-
         .aside{
-            width: calc(90%/3);
-            padding: 10px 10px 10px 0;
+            width: 90%;
             box-sizing: border-box;
         }
-
         .op-title{
             margin-bottom: 30px;
             position: relative;
-
             span{
                 padding-left: 10px;
                 display: block;
             }
-
             .en{
                 font-size: 14px;
                 line-height: 1.5;
             }
-
             .ja{
                 font-size: 18px;
                 font-weight: 600;
             }
-
             &::before{
                 content: "";
                 background-color: #444;
@@ -1476,6 +1470,25 @@ button{
                 position: absolute;
                 top: 0;
                 left: 0;
+            }
+        }
+    }
+}
+@media screen and (min-width:990px) {
+    #news-container{
+        .news-row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap-reverse;
+            .main{
+                width: calc(100%/3*2);
+                padding: 10px 0 10px 10px ;
+            }
+            .aside{
+                width: calc(90%/3);
+                padding: 10px 10px 10px 0;
             }
         }
     }
