@@ -962,8 +962,8 @@ button{
                 border-right: none;
             }
             h3{
-                font-size: 26px;
-                color: #4b93ff;
+                font-size: 28px;
+                color: #5790e7;
                 margin-bottom: 10px;
             }
             p{
@@ -972,7 +972,7 @@ button{
             .line{
                 font-size: 13px;
                 color: #777;
-                margin-top: 50px;
+                margin-top: 40px;
             }
         }
     }
@@ -1005,7 +1005,7 @@ button{
     }
 }
 
-.direct-service, .direct-work, .direct-contact{
+/* .direct-service, .direct-work, .direct-contact{
     a{
         display: flex;
         justify-content: flex-start;
@@ -1031,7 +1031,7 @@ button{
             }
         }
     }
-}
+} */
 
 /* serviceのCSS */
 #desc-service{
@@ -1042,91 +1042,138 @@ button{
         margin: 0 auto;
     }
 }
-
 .panel-section{
     margin: 15vh 0;
-
     .service{
         display: flex;
-
         > div{
             width: 50vw;
-            aspect-ratio: 1.618/1;
-            padding: 5vh 0;
+            min-height: 240px;
         }
-
         .text-box{
+            padding: 10px 0;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            position: relative;
-            overflow: hidden;
-
+            justify-content: center;
+            background-color: #8699b6;
             h3, p, a{
-                margin-left: 80px;
+                margin: 0 5%;
+                color: #f0f4f8;
             }
-
             h3{
-                font-size: 39px;
-                line-height: 1.3;
+                font-size: 25px;
+                line-height: 1.5;
             }
-
-            p{
-                margin-bottom: 15%;
+            p{  
+                font-size: 10px;
+                margin: 10px 5%;
             }
-
             .text{
-                width: 45%;
+                width: 80%;
             }
-
             a{
-                margin-right: auto;
-            }
-
-            .number{
-                font-size: 30rem;
-                color: #d3eeef94;
-                position: absolute;
-                bottom: -70px;
-                right: -50px;
-                z-index: -100;
+                font-weight: 600;
+                i{
+                    padding-left: 5px;
+                }
             }
         }
-
-        .box{
-            background-color: #d3eeef;
+        .box1{
+            background-image: url('../img/service_number_01.png');
+            background-position: right bottom;
+            background-size: cover;
+        }
+        .box2{
+            background-image: url('../img/service_number_02.png');
+            background-position: right bottom;
+            background-size: cover;
         }
     }
 }
-
 .flow-container{
-    width: 100%;
+    width: 90%;
     margin: 10vh auto;
-
     li{
-        background-color: #d3eeef94;
+        background-color: #d1d3d4;
         padding: 30px;
         margin-bottom: 20px;
         display: flex;
         align-items: center;
-
         .left{
-            font-size: 26px;
+            font-size: 20px;
         }
-
         .right{
             padding-left: 10%;
-
             h3{
-                font-size: 17px;
+                font-size: 16px;
                 margin-bottom: 10px;
             }
         }
-
         span, h3, p{
             line-height: 1.5;
         }
-
+    }
+}
+@media screen and (min-width:660px) and (max-width:989px) {
+    .panel-section{
+        .service{
+            > div{
+                aspect-ratio: 1.618/1;
+            }
+            .text-box{
+                padding: 25px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                h3, p, a{
+                    margin: 0 10%;
+                }
+                h3{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 13px;
+                    margin-bottom: 10%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:990px) {
+    .panel-section{
+        .service{
+            > div{
+                aspect-ratio: 1.618/1;
+                padding: 5vh 0;
+            }
+            .text-box{
+                padding: 30px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                h3, p, a{
+                    margin: 0 10%;
+                }
+                h3{
+                    font-size: 40px;
+                }
+                p{
+                    font-size: 16px;
+                    margin-bottom: 15%;
+                }
+                .text{
+                    width: 70%;
+                }
+            }
+        }
+    }
+    .flow-container{
+        width: 100%;
+        li{
+            .left{
+                font-size: 26px;
+            }    
+        }
     }
 }
 
