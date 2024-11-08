@@ -422,20 +422,20 @@ button{
     flex-direction: row;
     justify-content: space-between;
     a{
-        font-size: 30px;
+        font-size: 25px;
         color: rgb(255, 255, 255);
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
         text-decoration: none;
-        width: 40vw;
-        height: 300px;
+        width: 45vw;
+        height: 200px;
         margin: 5px;
         div{
             margin: 15px 0 15px 10px;
             span{
                 font-size: 15px;
-                padding-right: 15px;
+                padding-right: 10px;
                 text-decoration: underline;
             }
         }
@@ -642,6 +642,18 @@ button{
 }
 
 @media screen and (min-width:660px) and (max-width:989px) {
+    .service-container{
+        a{
+            font-size: 35px;
+            width: 40vw;
+            height: 300px;
+            div{
+                span{
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
     .direct-form{
         .form-panel{
             >div{
@@ -1159,18 +1171,17 @@ button{
 
 /* service01のCSS */
 #service-desc-section{
+    width: 90%;
     .content-container{
         max-width: 60%;
-        min-height: 70vh;
         position: relative;
-        
         p{
             margin-bottom: 40px;
         }
-
         &::before{
             content: "";
             width: 80%;
+            min-height: 150px;
             aspect-ratio: 1.618/1;
             background-color: #c8e2e3;
             position: absolute;
@@ -1178,11 +1189,70 @@ button{
             left: calc(52/60*100%);
             z-index: -10;
         }
-
         &:nth-child(even){
             margin-left: 40%;
             &::before{
                 left: calc(-40/60*100%);
+            }
+        }
+    }
+}
+@media screen and (min-width:660px) and (max-width:989px) {
+    #service-desc-section{
+        width: 90%;
+        .content-container{
+            max-width: 60%;
+            min-height: 60vh;
+            position: relative;
+            p{
+                margin-bottom: 40px;
+            }
+            &::before{
+                content: "";
+                width: 80%;
+                min-height: 150px;
+                aspect-ratio: 1.618/1;
+                background-color: #c8e2e3;
+                position: absolute;
+                top: 70px;
+                left: calc(52/60*100%);
+                z-index: -10;
+            }
+            &:nth-child(even){
+                margin-left: 40%;
+                &::before{
+                    left: calc(-40/60*100%);
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:990px) {
+    #service-desc-section{
+        width: 100%;
+        .content-container{
+            max-width: 60%;
+            min-height: 70vh;
+            position: relative;
+            p{
+                margin-bottom: 40px;
+            }
+            &::before{
+                content: "";
+                width: 80%;
+                min-height: 150px;
+                aspect-ratio: 16/10;
+                background-color: #c8e2e3;
+                position: absolute;
+                top: 70px;
+                left: calc(52/60*100%);
+                z-index: -10;
+            }
+            &:nth-child(even){
+                margin-left: 40%;
+                &::before{
+                    left: calc(-40/60*100%);
+                }
             }
         }
     }
