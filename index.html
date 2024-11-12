@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 </head>
 <body>
     <header>
         <div id="header-left">
-            <a href="/">
-                <img class="logo" src="https://placehold.jp/110x25.png" alt="会社ロゴ">
+            <a href="/" class="logo">
+                <img src="./assets/img/logo.png" alt="会社ロゴ">
+                <span>Company_name</span>
             </a>
         </div>
         <div id="header-right">
@@ -40,7 +42,7 @@
             </nav>
         </div>
         <div id="header-hamburger">
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" id="checkbox">
             <div class="span-container">
                 <span></span>
                 <span></span>
@@ -73,27 +75,32 @@
     <main>
         <section id="welcome">
             <div class="welcome-message">
-                <p>Lorem ipsum dolor</p>
-                <p class="sub">-Lorem ipsum dolor sit amet.-</p>
+                <p class="main">Lorem ipsum dolor</p>
+                <p class="">-Lorem ipsum dolor sit amet.-</p>
             </div>
         </section>
-        <section id="about" class="section-title">
+        <section id="about" class="section-title fadeIn">
             <div class="heading">
                 <p data-title="当社について">About Us</p>
             </div>
-            <div class="content-container">
-                <div>
-                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel.</p>
+            <div class="container">
+                <div class="img-container">
+                    <img src="https://placehold.jp/350x340.png" alt="">
                 </div>
-                <div>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl nibh, auctor ac consectetur id.</p>
-                </div>
-                <div class="btn">
-                    <button type="button arrow" onclick="location.href='./about.html'">Learn more</button>
+                <div class="content-container">
+                    <div>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel.</p>
+                    </div>
+                    <div>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl nibh, auctor ac consectetur id.</p>
+                    </div>
+                    <div class="btn">
+                        <button type="button arrow" onclick="location.href='./about.html'">Learn more</button>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="service" class="section-title">
+        <section id="service" class="section-title fadeIn">
             <div class="heading">
                 <p data-title="事業内容">Our Services</p>
             </div>
@@ -124,7 +131,7 @@
                 </div>
             </div>
         </section>
-        <section id="work" class="section-title">
+        <section id="work" class="section-title fadeIn">
             <div class="heading">
                 <p data-title="実績">Our Works</p>
             </div>
@@ -183,8 +190,7 @@
                 </div>
             </div>
         </section>
-    </section>
-    <section id="news" class="section-title">
+    <section id="news" class="section-title fadeIn">
         <div class="heading">
             <p data-title="ニュース">NEWS</p>
         </div>
@@ -232,29 +238,17 @@
             </div>
         </div>
     </section>
-    <!-- <section class="section-title direct-panel">
-        <div class="panel">
-            <div class="company-panel">
-                <a href="./company.html">
-                    <p data-title="会社概要">Company</p>
-                </a>
-            </div>
-            <div class="contact-panel">
-                <a href="./contact.html">
-                    <p data-title="お問い合わせ">Contact Us</p>
-                </a>
-            </div>
-        </div>
-    </section> -->
-    <section class="direct-form section-title">
+    <section class="direct-form">
         <div class="form-panel">
             <div>
                 <h2>まずはご相談ください</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vel placeat quos aperiam, maiores optio neque sapiente distinctio porro totam aliquam, provident molestias cupiditate eum </p>
             </div>
             <a href="">
-                <span>CONTACT FORM</span>
-                <i class="fas fa-arrow-right fa-fw"></i>
+                <div>
+                    <span>CONTACT FORM</span>
+                    <i class="fas fa-arrow-right fa-fw"></i>
+                </div>
             </a>
         </div>
     </section>
@@ -263,15 +257,16 @@
         <div class="container">
             <div class="footer-logo">
                 <a href="">
-                    <img src="https://placehold.jp/200x50.png" alt="会社ロゴ">
+                    <img src="./assets/img/logo.png" alt="会社ロゴ">
+                    <span>company_name</span>
                 </a>
-                <div class="footer-icon">
+                <!-- <div class="footer-icon">
                     <span>Official</span>
                     <a href=""><i class="fab fa-instagram"></i></a>
                     <a href=""><i class="fab fa-twitter-square"></i></a>
                     <a href=""><i class="fab fa-facebook-square"></i></a>
                     <a href=""><i class="fab fa-youtube"></i></a>
-                </div>
+                </div> -->
             </div>
             <div class="footer-nav">
                 <div class="page-nav">
@@ -300,5 +295,6 @@
         </div>
         <small id="copylight">&copy; company_name .inc</small>
     </footer>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

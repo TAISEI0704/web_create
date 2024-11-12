@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 </head>
 <body>
     <header>
         <div id="header-left">
-            <a href="/">
-                <img class="logo" src="https://placehold.jp/110x25.png" alt="会社ロゴ">
+            <a href="/" class="logo">
+                <img src="./assets/img/logo.png" alt="会社ロゴ">
+                <span>Company_name</span>
             </a>
         </div>
         <div id="header-right">
@@ -25,7 +27,7 @@
                         <a href="./service.html" data-title="サービス">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./work.html" data-title="実績">Works</a>
+                        <a href="./work.html" data-title="制作実績">Works</a>
                     </li>
                     <li class="nav-item">
                         <a href="./company.html" data-title="会社概要">Company</a>
@@ -40,7 +42,7 @@
             </nav>
         </div>
         <div id="header-hamburger">
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" id="checkbox">
             <div class="span-container">
                 <span></span>
                 <span></span>
@@ -210,34 +212,21 @@
                 </a>
             </div>
         </section>
-        <!-- <section class="section-title direct-panel">
-            <div class="panel">
-                <div class="company-panel">
-                    <a href="./company.html">
-                        <p data-title="会社概要">Company</p>
-                    </a>
-                </div>
-                <div class="contact-panel">
-                    <a href="./contact.html">
-                        <p data-title="お問い合わせ">Contact Us</p>
-                    </a>
-                </div>
-            </div>
-        </section> -->
     </main>
     <footer>
         <div class="container">
             <div class="footer-logo">
                 <a href="">
-                    <img src="https://placehold.jp/200x50.png" alt="会社ロゴ">
+                    <img src="./assets/img/logo.png" alt="会社ロゴ">
+                    <span>company_name</span>
                 </a>
-                <div class="footer-icon">
+                <!-- <div class="footer-icon">
                     <span>Official</span>
                     <a href=""><i class="fab fa-instagram"></i></a>
                     <a href=""><i class="fab fa-twitter-square"></i></a>
                     <a href=""><i class="fab fa-facebook-square"></i></a>
                     <a href=""><i class="fab fa-youtube"></i></a>
-                </div>
+                </div> -->
             </div>
             <div class="footer-nav">
                 <div class="page-nav">
@@ -266,5 +255,6 @@
         </div>
         <small id="copylight">&copy; company_name .inc</small>
     </footer>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

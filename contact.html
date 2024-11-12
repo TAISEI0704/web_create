@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 </head>
 <body>
     <header>
         <div id="header-left">
-            <a href="/">
-                <img class="logo" src="https://placehold.jp/110x25.png" alt="会社ロゴ">
+            <a href="/" class="logo">
+                <img src="./assets/img/logo.png" alt="会社ロゴ">
+                <span>Company_name</span>
             </a>
         </div>
         <div id="header-right">
@@ -40,7 +42,7 @@
             </nav>
         </div>
         <div id="header-hamburger">
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" id="checkbox">
             <div class="span-container">
                 <span></span>
                 <span></span>
@@ -86,32 +88,78 @@
                 <p data-title="お問い合わせ">Contact Form</p>
             </div>
             <div class="form-container">
+                <p>ご質問やさらに詳しい情報など、お問い合わせフォームよりお気軽にお問い合わせください。</p>
+                <ul>
+                    <li>入力</li>
+                    <li>確認</li>
+                    <li>完了</li>
+                </ul>
                 <form action="">
-
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="non-required">企業名</th>
+                                <td>
+                                    <input type="text" class="text-form">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">お名前（漢字）</th>
+                                <td>
+                                    <input type="text" class="text-form">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">お名前（カナ）</th>
+                                <td>
+                                    <input type="text" class="text-form">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">メールアドレス</th>
+                                <td>
+                                    <input type="text" class="text-form">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">お問い合わせ内容</th>
+                                <td>
+                                    <textarea name="お問い合わせ内容" id=""></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">個人情報の取扱い</th>
+                                <td>
+                                    <input type="checkbox" class="checkbox">同意する
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="submit">入力内容の確認画面へ</button>
                 </form>
+                <div class="tel-number">
+                    <span>お電話でのお問い合わせ</span>
+                    <span class="num">080-1234-5678</span>
+                    <span>受付時間:10:00~19:00</span>
+                </div>
             </div>
         </section>
-        <section class="section-title direct-panel">
-            <div class="direct-service">
-                <a href="./service.html">
-                    <p data-title="事業内容">Our Services</p>
-                </a>
-            </div>
-        </section>
+        <section class="section-title"></section>
     </main>
     <footer>
         <div class="container">
             <div class="footer-logo">
                 <a href="">
-                    <img src="https://placehold.jp/200x50.png" alt="会社ロゴ">
+                    <img src="./assets/img/logo.jpg" alt="会社ロゴ">
+                    <span>company_name</span>
                 </a>
-                <div class="footer-icon">
+                <!-- <div class="footer-icon">
                     <span>Official</span>
                     <a href=""><i class="fab fa-instagram"></i></a>
                     <a href=""><i class="fab fa-twitter-square"></i></a>
                     <a href=""><i class="fab fa-facebook-square"></i></a>
                     <a href=""><i class="fab fa-youtube"></i></a>
-                </div>
+                </div> -->
             </div>
             <div class="footer-nav">
                 <div class="page-nav">

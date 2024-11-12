@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 </head>
 <body>
     <header>
         <div id="header-left">
-            <a href="/">
-                <img class="logo" src="https://placehold.jp/110x25.png" alt="会社ロゴ">
+            <a href="/" class="logo">
+                <img src="./assets/img/logo.jpg" alt="会社ロゴ">
+                <span>Company_name</span>
             </a>
         </div>
         <div id="header-right">
@@ -25,7 +27,7 @@
                         <a href="./service.html" data-title="サービス">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./work.html" data-title="実績">Works</a>
+                        <a href="./work.html" data-title="制作実績">Works</a>
                     </li>
                     <li class="nav-item">
                         <a href="./company.html" data-title="会社概要">Company</a>
@@ -40,7 +42,7 @@
             </nav>
         </div>
         <div id="header-hamburger">
-            <input type="checkbox" class="checkbox">
+            <input type="checkbox" id="checkbox">
             <div class="span-container">
                 <span></span>
                 <span></span>
@@ -92,21 +94,23 @@
                         <h3>Service 1</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing </p>
                         <p class="text">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit. <br>Nullam auctor massa at magna ultricies.</p>
-                        <a href="./service01.html" class="more-link">View More</a>
-                        <div class="number">01</div>
+                        <a href="./service01.html" class="more-link">
+                            View More<i class="fas fa-arrow-right fa-fw"></i>
+                        </a>
                     </div>
-                    <div class="box">
+                    <div class="box1">
                     </div>
                 </div>
                 <div class="service">
-                    <div class="box">
+                    <div class="box2">
                     </div>
                     <div class="text-box">
                         <h3>Service 2</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing </p>
                         <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor massa at magna ultricies.</p>
-                        <a href="#" class="more-link">View More</a>
-                        <div class="number">02</div>
+                        <a href="./service01.html" class="more-link">
+                            View More<i class="fas fa-arrow-right fa-fw"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -240,15 +244,16 @@
         <div class="container">
             <div class="footer-logo">
                 <a href="">
-                    <img src="https://placehold.jp/200x50.png" alt="会社ロゴ">
+                    <img src="./assets/img/logo.jpg" alt="会社ロゴ">
+                    <span>company_name</span>
                 </a>
-                <div class="footer-icon">
+                <!-- <div class="footer-icon">
                     <span>Official</span>
                     <a href=""><i class="fab fa-instagram"></i></a>
                     <a href=""><i class="fab fa-twitter-square"></i></a>
                     <a href=""><i class="fab fa-facebook-square"></i></a>
                     <a href=""><i class="fab fa-youtube"></i></a>
-                </div>
+                </div> -->
             </div>
             <div class="footer-nav">
                 <div class="page-nav">
@@ -277,5 +282,6 @@
         </div>
         <small id="copylight">&copy; company_name .inc</small>
     </footer>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
