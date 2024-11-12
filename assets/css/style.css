@@ -1172,57 +1172,69 @@ button{
 /* service01のCSS */
 #service-desc-section{
     width: 90%;
+    .container{
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .img-container{
+        width: 100%;
+        padding: 0 5px;
+        margin-bottom: 25px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 70%;
+            aspect-ratio: 16/10;
+        }
+    }
     .content-container{
-        max-width: 60%;
-        position: relative;
+        width: 100%;
+        box-sizing: border-box;
         p{
-            margin-bottom: 40px;
+            text-align: center;
+            margin-bottom: 20px;
         }
-        &::before{
-            content: "";
-            width: 80%;
-            min-height: 150px;
-            aspect-ratio: 1.618/1;
-            background-color: #c8e2e3;
-            position: absolute;
-            top: 70px;
-            left: calc(52/60*100%);
-            z-index: -10;
-        }
-        &:nth-child(even){
-            margin-left: 40%;
-            &::before{
-                left: calc(-40/60*100%);
-            }
+        .text{
+            width: 100%;
+            font-size: 18px;
         }
     }
 }
-@media screen and (min-width:660px) and (max-width:989px) {
+@media screen and (min-width:660px) and (max-width:990px) {
     #service-desc-section{
-        width: 90%;
-        .content-container{
-            max-width: 60%;
-            min-height: 60vh;
-            position: relative;
-            p{
-                margin-bottom: 40px;
-            }
-            &::before{
-                content: "";
-                width: 80%;
-                min-height: 150px;
-                aspect-ratio: 1.618/1;
-                background-color: #c8e2e3;
-                position: absolute;
-                top: 70px;
-                left: calc(52/60*100%);
-                z-index: -10;
-            }
+        width: 80%;
+        .container{
+            margin-bottom: 120px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
             &:nth-child(even){
-                margin-left: 40%;
-                &::before{
-                    left: calc(-40/60*100%);
-                }
+                flex-direction: row;
+            }
+        }
+        .img-container{
+            width: 40%;
+            padding: 0 5px;
+            box-sizing: border-box;
+            img{
+                width: 100%;
+            }
+        }
+        .content-container{
+            width: 60%;
+            box-sizing: border-box;
+            p{
+                text-align: start;
+                margin-bottom: 20px;
+            }
+            .text{
+                width: 80%;
             }
         }
     }
@@ -1230,29 +1242,29 @@ button{
 @media screen and (min-width:990px) {
     #service-desc-section{
         width: 100%;
-        .content-container{
-            max-width: 60%;
-            min-height: 70vh;
-            position: relative;
-            p{
-                margin-bottom: 40px;
-            }
-            &::before{
-                content: "";
-                width: 80%;
-                min-height: 150px;
-                aspect-ratio: 16/10;
-                background-color: #c8e2e3;
-                position: absolute;
-                top: 70px;
-                left: calc(52/60*100%);
-                z-index: -10;
-            }
+        .container{
+            margin-bottom: 120px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
             &:nth-child(even){
-                margin-left: 40%;
-                &::before{
-                    left: calc(-40/60*100%);
-                }
+                flex-direction: row;
+            }
+        }
+        .img-container{
+            width: 40%;
+            img{
+                width: 100%;
+            }
+        }
+        .content-container{
+            width: 60%;
+            p{
+                text-align: start;
+                margin-bottom: 20px;
+            }
+            .text{
+                width: 80%;
             }
         }
     }
