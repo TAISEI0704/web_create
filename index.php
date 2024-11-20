@@ -1,77 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-</head>
-<body>
-    <header>
-        <div id="header-left">
-            <a href="/" class="logo">
-                <img src="./assets/img/logo.png" alt="会社ロゴ">
-                <span>Company_name</span>
-            </a>
-        </div>
-        <div id="header-right">
-            <nav id="header-nav">
-                <ul>
-                    <li class="nav-item">
-                        <a href="./about.html" data-title="当社について">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./service.html" data-title="サービス">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./work.html" data-title="制作実績">Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./company.html" data-title="会社概要">Company</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./news.html" data-title="お知らせ">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./contact.html" data-title="お問い合わせ">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div id="header-hamburger">
-            <input type="checkbox" id="checkbox">
-            <div class="span-container">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav id="nav-hamburger">
-                <ul>
-                    <li class="nav-item">
-                        <a href="./about.html" data-title="当社について">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./service.html" data-title="サービス">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./work.html" data-title="実績">Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./company.html" data-title="会社概要">Company</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./news.html" data-title="お知らせ">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./contact.html" data-title="お問い合わせ">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<?php get_header(); ?>
     <main>
         <section id="welcome">
             <div class="welcome-message">
@@ -89,13 +16,13 @@
                 </div>
                 <div class="content-container">
                     <div>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel.</p>
+                        <p class="text">私たちは、お客様の夢を現実に変える、伴走型のパートナーです。常に寄り添い、共に課題を解決し、新たな可能性を切り拓きます。</p>
                     </div>
                     <div>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisl nibh, auctor ac consectetur id.</p>
+                        <p class="description">私たちは、お客様の未来を共に創造する、革新的で信頼性の高いパートナーです。最先端の技術と深い洞察力を融合させ、複雑な経営課題に対して、常に独自の創造的なソリューションを提供します。</p>
                     </div>
                     <div class="btn">
-                        <button type="button arrow" onclick="location.href='./about.html'">Learn more</button>
+                        <button type="button arrow" onclick="location.href='<?php echo home_url('/about'); ?>'">Learn more</button>
                     </div>
                 </div>
             </div>
@@ -196,19 +123,25 @@
         </div>
         <div class="news-row">
             <div class="main">
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
                 <article class="news-article">
-                    <a href="">
+                    <a href="<?php the_permalink(); ?>">
                         <div class="head">
                             <time datetime="2024-10-23">2024.10.23</time>
                             <p class="news-tag info">お知らせ</p>
                         </div>
                         <div class="body">
-                            <h2>宇宙旅行の新たなパートナー、地球外生命体との接触を発表</h2>
+                            <h2><?php the_title(); ?></h2>
                             <i class="fas fa-arrow-right fa-fw"></i>
                         </div>
                     </a>
                 </article>
-                <article class="news-article">
+                <?php endwhile; ?>
+            <?php else : ?>
+                <p>記事がありません。</p>
+            <?php endif; ?>
+                <!-- <article class="news-article">
                     <a href="">
                         <div class="head">
                             <time datetime="2024-10-01">2024.10.01</time>
@@ -231,7 +164,7 @@
                             <i class="fas fa-arrow-right fa-fw"></i>
                         </div>
                     </a>
-                </article>
+                </article> -->
             </div>
             <div class="btn">
                 <button type="button arrow" onclick="location.href='./news.html'">Learn more</button>
@@ -253,48 +186,4 @@
         </div>
     </section>
     </main>
-    <footer>
-        <div class="container">
-            <div class="footer-logo">
-                <a href="">
-                    <img src="./assets/img/logo.png" alt="会社ロゴ">
-                    <span>company_name</span>
-                </a>
-                <!-- <div class="footer-icon">
-                    <span>Official</span>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-twitter-square"></i></a>
-                    <a href=""><i class="fab fa-facebook-square"></i></a>
-                    <a href=""><i class="fab fa-youtube"></i></a>
-                </div> -->
-            </div>
-            <div class="footer-nav">
-                <div class="page-nav">
-                    <div class="nav-container">
-                        <a href="./about.html">about</a>
-                        <a href="./service.html">services</a>
-                        <a href="./work.html">works</a>
-                    </div>
-                    <div class="nav-container">
-                        <a href="./company.html">company</a>
-                        <a href="./news.html">news</a>
-                        <a href="./contact.html">contact</a>
-                    </div>
-                </div>
-                <div class="other-nav">
-                    <ul>
-                        <li>
-                            <a href="">プライバシーポリシー</a>
-                        </li>
-                        <li>
-                            <a href="">免責事項</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <small id="copylight">&copy; company_name .inc</small>
-    </footer>
-    <script src="./assets/js/main.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>
