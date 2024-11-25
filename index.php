@@ -1,3 +1,13 @@
+<?php
+$array_news = array(
+    'post_type' => 'post',
+    'posts_per_page' => 5,
+    'category_name' => 'News',
+);
+$news = new WP_Query($array_news);
+var_dump($news);
+?>
+
 <?php get_header(); ?>
     <main>
         <section id="welcome">
@@ -128,7 +138,7 @@
                 <article class="news-article">
                     <a href="<?php the_permalink(); ?>">
                         <div class="head">
-                            <time datetime="2024-10-23">2024.10.23</time>
+                            <time datetime="<?php the_date(); ?>"><?php the_date(); ?></time>
                             <p class="news-tag info">お知らせ</p>
                         </div>
                         <div class="body">
@@ -137,7 +147,8 @@
                         </div>
                     </a>
                 </article>
-                <?php endwhile; ?>
+                <?php endwhile; 
+                    wp_reset_postdata(); ?>
             <?php else : ?>
                 <p>記事がありません。</p>
             <?php endif; ?>
